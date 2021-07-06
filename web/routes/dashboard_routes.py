@@ -54,14 +54,14 @@ class DashboardRoutes:
         @app.route("/dashboard/tour/modify", methods=["GET", "POST"])
         def cityModify():
             if request.method == "GET":
-                return render_template("cityModify.html")
+                return render_template("placeModify.html")
             elif request.method == "POST":
                 tourId = int(request.form["tourid"])
                 url = f"http://localhost:23512/tour/{tourId}"
                 data = {
                     "nombre": request.form["nombre"],
                     "ubicacion": request.form["ubicacion"]
-                }  # TODO TERMINAR DE MODIFICAR PARA TOUR ESTE METODO Y MODIFICAR RL HTML DE MODIFY
+                }
                 response = requests.patch(url, data=data)
                 if response.status_code == 200:
                     dataJson = response.json()

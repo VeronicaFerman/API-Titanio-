@@ -1,7 +1,7 @@
 # API-Titanio-
 REST API Grupo Titanio (Agencia de transporte)
 
-# Tabla de guias turisticos
+# Tabla de lugares turisticos
 -id
 
 -nombre lugar

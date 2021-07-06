@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>city create</title>
+    <title>Borrar lugar</title>
 </head>
 
 <body>
-    <h1>city deleete</h1>
+    <h1>Eliminar lugar turístico</h1>
 
-    <p>this is city deletition</p>
+    <p>A continuación, inserte el ID del lugar turístico a eliminar</p>
 
-    <form action="{{ url_for('cityDelete') }}" method="post">
+    <form action="{{ url_for('placeDelete') }}" method="post">
         <label for="tourid">id:</label>
         <input type="number" name="tourid" id="tourid">
         <br><br>

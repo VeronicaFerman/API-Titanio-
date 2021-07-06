@@ -16,9 +16,9 @@ class TourLogic(PybaLogic):
             return {}
 
     # post
-    def getCityByUbicacion(self, ubic):
+    def getAllPlaces(self, id):
         database = self.createDatabaseObj()
-        sql = f"SELECT * FROM test_api.lugares_turisticos where ubicacion='{ubic}';"
+        sql = f"SELECT * FROM test_api.lugares_turisticos;"
         result = database.executeQuery(sql)
         if len(result) != 0:
             return result

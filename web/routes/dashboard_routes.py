@@ -10,27 +10,27 @@ class DashboardRoutes:
             return render_template("dashboard.html")
 
         @app.route("/dashboard/tour/<int:id>")
-        def city(id):
+        def place(id):
             url = f"http://localhost:23512/tour/{id}"
             response = requests.get(url)
             if response.status_code == 200:
                 dataJson = response.json()
-                return render_template("places.html", id=id, city=dataJson)
+                return render_template("places.html", id=id, place=dataJson)
             else:
                 return redirect("dashboard")
 
-        """@app.route("/dashboard/tour/<int:id>")
-        def country(id):
-            url = f"http://localhost:23512/tour/{id}"
+        @app.route("/dashboard/tour/0", methods=["GET", "POST"])
+        def places():
+            url = f"http://localhost:23512/tour/0"
             response = requests.post(url)
             if response.status_code == 200:
                 dataJson = response.json()
-                return render_template("country.html", cityList=dataJson)
+                return render_template("places.html", place=dataJson)
             else:
-                return redirect("dashboard")"""
+                return redirect("dashboard")
 
         @app.route("/dashboard/tour/create", methods=["GET", "POST"])
-        def cityCreate():
+        def placeCreate():
             if request.method == "GET":
                 return render_template("placeCreate.html")
             elif request.method == "POST":
@@ -52,7 +52,7 @@ class DashboardRoutes:
                     return redirect("dashboard")
 
         @app.route("/dashboard/tour/modify", methods=["GET", "POST"])
-        def cityModify():
+        def placeModify():
             if request.method == "GET":
                 return render_template("placeModify.html")
             elif request.method == "POST":
@@ -75,7 +75,7 @@ class DashboardRoutes:
                     return redirect("dashboard")
 
         @app.route("/dashboard/tour/delete", methods=["GET", "POST"])
-        def cityDelete():
+        def placeDelete():
             if request.method == "GET":
                 return render_template("placeDelete.html")
             elif request.method == "POST":

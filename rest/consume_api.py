@@ -4,14 +4,13 @@ import requests
 print(response)
 if response.status_code == 200:
     dataJson = response.json()
-    
-        print(dataJson)"""
+    print(dataJson)"""
 
-""" response = requests.post("http://localhost:23512/tour/1")
+response = requests.post("http://localhost:23512/tour/0")
 print(response)
 if response.status_code == 200:
     dataJson = response.json()
-    print(dataJson) """
+    print(dataJson)
 
 """data = {
     "nombre": "Laguna de Alegría",

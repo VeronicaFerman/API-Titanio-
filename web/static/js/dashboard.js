@@ -4,9 +4,8 @@ function cityIdOnChange() {
     cityLink.href = "/dashboard/tour/" + cityId;
 }
 
-function countryCityIdOnChange() {
-    var countryCityId = document.getElementById("countrycityid").value;
-    var countryLink = document.getElementById("countryLink");
-    countryLink.href = "/dashboard/tour/" + countryCityId;
-
+function places() {
+    var cityLink = document.getElementById("placescreate");
+    cityLink.href = "/dashboard/tour/0";
+    console.log(cityLink);
 }

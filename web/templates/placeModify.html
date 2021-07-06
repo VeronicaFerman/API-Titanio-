@@ -11,16 +11,16 @@
 <body>
     <h1>Modificar lugar</h1>
 
-    <p>this is modify section</p>
+    <p>A continuación, rellené toda la información necesaria. La información que no quiera mpdificar escríbala tal y la ingresó anteriormente.</p>
 
-    <form action="{{ url_for('cityModify') }}" method="post">
-        <label for="tourid">id:</label>
+    <form action="{{ url_for('placeModify') }}" method="post">
+        <label for="tourid">ID:</label>
         <input type="number" name="tourid" id="tourid">
         <br><br>
-        <label for="nombre">nombre</label>
+        <label for="nombre">Nombre del lugar:</label>
         <input type="text" name="nombre" id="nombre">
         <br><br>
-        <label for="ubicacion">ubicacion</label>
+        <label for="ubicacion">Departamento:</label>
         <input type="text" name="ubicacion" id="ubicacion">
         <br><br>
         <input type="submit" value="Modify">

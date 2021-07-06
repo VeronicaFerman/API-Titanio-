@@ -18,9 +18,7 @@ class Tour(Resource):
         return result, 200
 
     def post(self, id):
-        tourDict = self.logic.getPlaceById(id)
-        location = tourDict["ubicacion"]
-        result = self.logic.getCityByUbicacion(location)
+        result = self.logic.getAllPlaces(id)
         return result, 200
 
     def put(self, id):

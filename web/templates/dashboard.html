@@ -11,21 +11,24 @@
 
 <body>
     <h1>Dashboard</h1>
-    <p>This is dashboard
+    <p>Bienvenido al dashboard
         <!--{{ session["login_user"] }}-->
     </p>
 
+    <a href="{{ url_for('places') }}" name="placescreate" id="placescreate" onclick="places()">Mostrar todos los lugares</a>
+    <br><br>
+
     <input type="number" name="tourid" id="tourid" onchange="cityIdOnChange()">
-    <a href="" name="tourLink" id="tourLink" onclick="">go to place</a>
+    <a href="" name="tourLink" id="tourLink" onclick="">Mostrar lugar seleccionado</a>
     <br><br>
 
-    <a href="{{ url_for('cityCreate') }}" name="citycreate" id="citycreate">go to city create</a>
+    <a href="{{ url_for('placeCreate') }}" name="placecreate" id="placecreate">Agregar un nuevo sitio turístico</a>
     <br><br>
 
-    <a href="{{ url_for('cityModify') }}" name="citymodify" id="citymodify">go to city modify</a>
+    <a href="{{ url_for('placeModify') }}" name="placemodify" id="placemodify">Modificar un sitio registrado</a>
     <br><br>
 
-    <a href="{{ url_for('cityDelete') }}" name="citydelete" id="citydelete">go to city delete</a>
+    <a href="{{ url_for('placeDelete') }}" name="placedelete" id="placedelete">Eliminar un sitio turístico</a>
     <br><br>
 </body>
 

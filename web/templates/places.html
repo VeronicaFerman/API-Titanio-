@@ -11,22 +11,24 @@
 <body>
     <h1>Lugares turísticos</h1>
 
-    <p>:D</p>
+    <p>Lugares turísticos que visitar en El Salvador</p>
 
     <table border="1">
         <tr>
-            <th>id</th>
-            <th>name</th>
-            <th>location</th>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Departamento</th>
         </tr>
+        {% for lugar in place %}
         <tr>
-            <td>{{ city["id"] }}</td>
-            <td>{{ city["nombre"] }}</td>
-            <td>{{ city["ubicacion"] }}</td>
+            <td>{{ lugar["id"] }}</td>
+            <td>{{ lugar["nombre"] }}</td>
+            <td>{{ lugar["ubicacion"] }}</td>
         </tr>
+        {% endfor %}
     </table>
     <br><br>
-    <a href="{{ url_for('dashboard') }}">go Back</a>
+    <a href="{{ url_for('dashboard') }}">Dashboard</a>
 </body>
 
 </html>

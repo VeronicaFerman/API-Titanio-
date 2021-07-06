@@ -74,13 +74,13 @@ class DashboardRoutes:
                 else:
                     return redirect("dashboard")
 
-        @app.route("/dashboard/city/delete", methods=["GET", "POST"])
+        @app.route("/dashboard/tour/delete", methods=["GET", "POST"])
         def cityDelete():
             if request.method == "GET":
-                return render_template("cityDelete.html")
+                return render_template("placeDelete.html")
             elif request.method == "POST":
-                cityId = int(request.form["cityid"])
-                url = f"http://localhost:23512/city/{cityId}"
+                tourId = int(request.form["tourid"])
+                url = f"http://localhost:23512/tour/{tourId}"
                 response = requests.delete(url)
                 if response.status_code == 200:
                     dataJson = response.json()

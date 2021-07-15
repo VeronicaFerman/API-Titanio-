@@ -9,7 +9,7 @@ class DashboardRoutes:
         def dashboard():
             return render_template("dashboard.html")
 
-        @app.route("/dashboard/tour/<int:id>")
+        """@app.route("/dashboard/tour/<int:id>")
         def place(id):
             url = f"http://localhost:23512/tour/{id}"
             response = requests.get(url)
@@ -17,11 +17,11 @@ class DashboardRoutes:
                 dataJson = response.json()
                 return render_template("places.html", id=id, place=dataJson)
             else:
-                return redirect("dashboard")
+                return redirect("dashboard")"""
 
-        @app.route("/dashboard/tour", methods=["GET", "POST"])
-        def places():
-            url = f"http://localhost:23512/tour/0"
+        @app.route("/dashboard/tour/<string:ubicacion>", methods=["GET", "POST"])
+        def places(ubicacion):
+            url = f"http://localhost:23512/tour/{ubicacion}"
             response = requests.post(url)
             if response.status_code == 200:
                 dataJson = response.json()

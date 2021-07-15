@@ -1,10 +1,10 @@
 import requests
 
-"""response = requests.get("http://localhost:23512/tour/1")
+response = requests.get("http://localhost:23512/tour/Chalatenango")
 print(response)
 if response.status_code == 200:
     dataJson = response.json()
-    print(dataJson)"""
+    print(dataJson)
 
 """response = requests.post("http://localhost:23512/tour/0")
 print(response)

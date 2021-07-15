@@ -14,8 +14,8 @@ class Tour(Resource):
         args.add_argument("imagen", type=str, help="image of the place")
         return args
 
-    def get(self, id):
-        result = self.logic.getPlaceById(id)
+    def get(self, ubicacion):
+        result = self.logic.getPlaceByUbicacion(ubicacion)
         return result, 200
 
     def post(self, id):

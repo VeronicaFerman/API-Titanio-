@@ -6,9 +6,9 @@ class TourLogic(PybaLogic):
         super().__init__()
 
     # get
-    def getPlaceById(self, id):
+    def getPlaceByUbicacion(self, ubicacion):
         database = self.createDatabaseObj()
-        sql = f"SELECT * FROM lugares_turisticos where id={id};"
+        sql = f"SELECT * FROM lugares_turisticos where ubicacion like '{ubicacion}';"
         result = database.executeQuery(sql)
         if len(result) != 0:
             return result[0]

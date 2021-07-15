@@ -19,7 +19,7 @@ class DashboardRoutes:
             else:
                 return redirect("dashboard")
 
-        @app.route("/dashboard/tour/0", methods=["GET", "POST"])
+        @app.route("/dashboard/tour", methods=["GET", "POST"])
         def places():
             url = f"http://localhost:23512/tour/0"
             response = requests.post(url)

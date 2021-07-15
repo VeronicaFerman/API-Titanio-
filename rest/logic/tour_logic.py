@@ -8,7 +8,7 @@ class TourLogic(PybaLogic):
     # get
     def getPlaceById(self, id):
         database = self.createDatabaseObj()
-        sql = f"SELECT * FROM test_api.lugares_turisticos where id={id};"
+        sql = f"SELECT * FROM lugares_turisticos where id={id};"
         result = database.executeQuery(sql)
         if len(result) != 0:
             return result[0]
@@ -18,7 +18,7 @@ class TourLogic(PybaLogic):
     # post
     def getAllPlaces(self, id):
         database = self.createDatabaseObj()
-        sql = f"SELECT * FROM test_api.lugares_turisticos;"
+        sql = f"SELECT * FROM lugares_turisticos;"
         result = database.executeQuery(sql)
         if len(result) != 0:
             return result
@@ -29,7 +29,7 @@ class TourLogic(PybaLogic):
     def insertPlace(self, city):
         database = self.createDatabaseObj()
         sql = (
-            f"INSERT INTO `test_api`.`lugares_turisticos`"
+            f"INSERT INTO `lugares_turisticos`"
             + f"(`id`,`nombre`,`ubicacion`) "
             + f"VALUES(0,'{city['nombre']}','{city['ubicacion']}');"
         )
@@ -40,7 +40,7 @@ class TourLogic(PybaLogic):
     def updatePlace(self, id, city):
         database = self.createDatabaseObj()
         sql = (
-            f"UPDATE `test_api`.`lugares_turisticos` "
+            f"UPDATE `lugares_turisticos` "
             + f"SET `nombre` = '{city['nombre']}',`ubicacion` = '{city['ubicacion']}' "
             + f"WHERE `id` = {id};"
         )
@@ -50,6 +50,6 @@ class TourLogic(PybaLogic):
     # delete
     def deletePlace(self, id):
         database = self.createDatabaseObj()
-        sql = f"DELETE FROM `test_api`.`lugares_turisticos` WHERE id={id};"
+        sql = f"DELETE FROM `lugares_turisticos` WHERE id={id};"
         rows = database.executeNonQueryRows(sql)
         return rows

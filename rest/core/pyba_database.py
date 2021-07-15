@@ -7,7 +7,7 @@ class PybaDatabase:
         self.port = 3306
         self.user = "root"
         self.password = "12345"
-        self.database = "test_api"
+        self.database = "test_ap"
         self.connection = self.createConnection()
         self.cursor = self.createCursor()
 

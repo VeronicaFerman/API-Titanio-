@@ -19,11 +19,12 @@
             <th>Nombre</th>
             <th>Departamento</th>
         </tr>
-        {% for lugar in place %}
+        {% for element in place %}
         <tr>
-            <td>{{ lugar["id"] }}</td>
-            <td>{{ lugar["nombre"] }}</td>
-            <td>{{ lugar["ubicacion"] }}</td>
+            <td>{{ element["id"] }}</td>
+            <td>{{ element["nombre"] }}</td>
+            <td>{{ element["ubicacion"] }}</td>
+            <td><img src="{{ element["imagen"] }}"></td>
         </tr>
         {% endfor %}
     </table>

@@ -10,8 +10,8 @@ if response.status_code == 200:
 print(response)
 if response.status_code == 200:
     dataJson = response.json()
-    print(dataJson)"""
-
+    print(dataJson)
+"""
 """data = {
     "nombre": "Laguna de Alegría",
     "ubicacion": "San Vicente"

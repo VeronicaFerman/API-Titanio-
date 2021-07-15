@@ -11,6 +11,7 @@ class Tour(Resource):
         args = reqparse.RequestParser()
         args.add_argument("nombre", type=str, help="name of the place")
         args.add_argument("ubicacion", type=str, help="location of the place")
+        args.add_argument("imagen", type=str, help="image of the place")
         return args
 
     def get(self, id):

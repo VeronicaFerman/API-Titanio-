@@ -26,7 +26,7 @@ class HotelLogic(PybaLogic):
             return []
 
     # put
-    def insertPlace(self, hotel):
+    def insertHotel(self, hotel):
         database = self.createDatabaseObj()
         sql = (
             f"INSERT INTO `hoteles`"
@@ -37,7 +37,7 @@ class HotelLogic(PybaLogic):
         return rows
 
      # patch
-    def updatePlace(self, id, hotel):
+    def updateHotel(self, id, hotel):
         database = self.createDatabaseObj()
         sql = (
             f"UPDATE `hoteles`"
@@ -48,7 +48,7 @@ class HotelLogic(PybaLogic):
         return rows
 
      # delete
-    def deletePlace(self, id):
+    def deleteHotel(self, id):
         database = self.createDatabaseObj()
         sql = f"DELETE FROM `hoteles` WHERE id={id};"
         rows = database.executeNonQueryRows(sql)

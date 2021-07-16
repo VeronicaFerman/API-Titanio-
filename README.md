@@ -7,3 +7,16 @@ REST API Grupo Titanio (Agencia de transporte)
 -nombre lugar
 
 -ubicacion
+
+# Tabla de hoteles
+-id
+
+-nombre
+
+-ubicacion
+
+-telefono
+
+-pag_web
+
+-foto

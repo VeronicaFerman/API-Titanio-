@@ -13,6 +13,20 @@ REST API Grupo Titanio (Agencia de transporte)
 ## Post
   [{'id': 1, 'nombre': 'Playa El Tunco', 'ubicacion': 'La Libertad', 'imagen': 'https://ipanelsalvador.files.wordpress.com/2012/09/eltiunco.jpg?w=590'}, ... {'id': 20, 'nombre': 'Volcan De Santa Ana O Ilamatepec', 'ubicacion': 'Santa Ana', 'imagen': 'https://astelus.com/wp-content/viajes/volcan-ilamatepec-el-salvador.jpg'}]
 
+-ubicacion
+
+# Tabla de hoteles
+-id
+
+-nombre
+
+-ubicacion
+
+-telefono
+
+-pag_web
+
+-foto
 # Tabla de agencias turísticas
 -id (int)
 -nombre (varchar)

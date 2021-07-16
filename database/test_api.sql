@@ -28,7 +28,7 @@ CREATE TABLE `agencias_turisticas` (
   `telefono` varchar(15) NOT NULL,
   `contactoEnLinea` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `agencias_turisticas` (
 
 LOCK TABLES `agencias_turisticas` WRITE;
 /*!40000 ALTER TABLE `agencias_turisticas` DISABLE KEYS */;
-INSERT INTO `agencias_turisticas` VALUES (1,'El Salvador Turismo','77681338','https://www.elsalvadorturismo.com.sv/');
+INSERT INTO `agencias_turisticas` VALUES (1,'El Salvador Turismo','77681338','https://www.elsalvadorturismo.com.sv/'),(2,'El Salvador Xpedition','70564885','https://elsalvadorxpedition.com/'),(3,'Dolphins Tours','79384557','http://www.delfinestour.net/'),(4,'Eco Tours Petate','71819077','https://www.ecotourspetate.com/'),(5,'Eco Mayan Tours DMC','25270229','http://ecomayantours.com/'),(6,'MORAZAN TOURS','79225465','http://www.morazantours.com.sv/'),(7,'AVITOURS DMC','25107619','http://www.avitours.com.sv/'),(8,'EC Tours El Salvador','78424708','http://www.ectourselsalvador.com/'),(9,'Epic Tours El Salvador','78904751','http://epictourselsalvador.com/'),(10,'GREEN BLUE RED','22527660','http://www.greenbluered.com/'),(11,'CADISI Tours Operador','77295887','https://cadisitours.com/'),(12,'INTER TOURS','22636188','http://www.intertours.com.sv/'),(13,'NAHUAT TOURS','79296166','http://www.nahuatours.com/'),(14,'NETWORK TOURS','78856175','https://network-tours.com/'),(15,'Papagayo Adventures  El Salvador','78745113','https://www.facebook.com/Papagayo-Adventures-El-Salvador-208490332495192/'),(16,'Salvadorean Tours','22436074','http://www.salvadoreantours.com/'),(17,'Cuzca Tours El Salvador','77466970','https://www.facebook.com/cuzcatour/'),(18,'Escaladores Tours El Salvador','25285127','https://es-la.facebook.com/escaladores.tours/'),(19,'EL SALVADOR POSITIVE TOURS','22687531','https://elsalvadorpositivetours.com/'),(20,'RASTAMAYA (OPERADOR DE TURISMO)','24080344','http://rastamaya.com/');
 /*!40000 ALTER TABLE `agencias_turisticas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -76,4 +76,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-07-15 22:04:11
+-- Dump completed on 2021-07-15 23:10:07

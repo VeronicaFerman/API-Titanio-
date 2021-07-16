@@ -6,6 +6,7 @@ if response.status_code == 200:
     dataJson = response.json()
     print(dataJson)
 
+
 """response = requests.post("http://localhost:23512/tour/0")
 print(response)
 if response.status_code == 200:
@@ -37,3 +38,11 @@ print(response)
 if response.status_code == 200:
     dataJson = response.json()
     print(dataJson)"""
+"""""
+#Prubeas agencias
+response = requests.get("http://localhost:23512/agencias/1")
+print(response)
+if response.status_code == 200:
+    dataJson = response.json()
+    print(dataJson)
+"""""

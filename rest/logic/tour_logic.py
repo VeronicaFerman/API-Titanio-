@@ -11,12 +11,12 @@ class TourLogic(PybaLogic):
         sql = f"SELECT * FROM lugares_turisticos where ubicacion like '{ubicacion}';"
         result = database.executeQuery(sql)
         if len(result) != 0:
-            return result[0]
+            return result
         else:
             return {}
 
     # post
-    def getAllPlaces(self, id):
+    def getAllPlaces(self, ubicacion):
         database = self.createDatabaseObj()
         sql = f"SELECT * FROM lugares_turisticos;"
         result = database.executeQuery(sql)

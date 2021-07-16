@@ -18,8 +18,8 @@ class Tour(Resource):
         result = self.logic.getPlaceByUbicacion(ubicacion)
         return result, 200
 
-    def post(self, id):
-        result = self.logic.getAllPlaces(id)
+    def post(self, ubicacion):
+        result = self.logic.getAllPlaces(ubicacion)
         return result, 200
 
     def put(self, id):

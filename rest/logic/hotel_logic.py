@@ -11,7 +11,7 @@ class HotelLogic(PybaLogic):
         sql = f"SELECT * FROM hoteles where ubicacion like '{ubicacion}';"
         result = database.executeQuery(sql)
         if len(result) != 0:
-            return result[0]
+            return result
         else:
             return {}
 

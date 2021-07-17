@@ -25,13 +25,13 @@ class Hotel(Resource):
         return result, 200
 
     def put(self, id):
-        tour = self.tour_put_args.parse_args()
+        hotel = self.tour_put_args.parse_args()
         rows = self.logic.insertHotel(hotel)
         return {"rowsAffected": rows}
 
     def patch(self, id):
         city = self.tour_put_args.parse_args()
-        rows = self.logic.updateHotel(id, hotel)
+        rows = self.logic.updateHotel(id, city)
         return {"rowsAffected": rows}
 
     def delete(self, id):

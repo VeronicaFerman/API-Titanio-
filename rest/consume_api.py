@@ -41,3 +41,48 @@ print(response)
 if response.status_code == 200:
     dataJson = response.json()
     print(dataJson)"""
+
+#HOTEL
+response = requests.get("http://localhost:23512/hotel/San Salvador")
+print(response)
+if response.status_code == 200:
+    dataJson = response.json()
+    print(dataJson)
+
+"""response = requests.post("http://localhost:23512/hotel/all")
+print(response)
+if response.status_code == 200:
+    dataJson = response.json()
+    print(dataJson)"""
+
+"""data = {
+    "nombre": "Hotel Santa Elena",
+    "ubicacion": "San Salvador",
+    "telefono": 2234-2637,
+    "pag_web": "https://hotelsantaelena.com/",
+    "foto": "https://hotelsantaelena.com/assets/img/3/carousel_01.jpg"
+}
+response = requests.put("http://localhost:23512/hotel/0", data=data)
+print(response)
+if response.status_code == 200:
+    dataJson = response.json()
+    print(dataJson)"""
+
+"""data = {
+    "nombre": "Hotel Don Moncho",
+    "ubicacion": "La Libertad",
+    "telefono": 2563-2553,
+    "pag_web": "https://www.facebook.com/Hotel-El-Patio-de-Don-Moncho-130549366961076/",
+    "foto": "https://media-cdn.tripadvisor.com/media/photo-p/09/66/6e/0c/el-patio-de-don-moncho.jpg"
+}
+response = requests.patch("http://localhost:23512/hotel/2", data=data)
+print(response)
+if response.status_code == 200:
+    dataJson = response.json()
+    print(dataJson)"""
+
+"""response = requests.delete("http://localhost:23512/hotel/2")
+print(response)
+if response.status_code == 200:
+    dataJson = response.json()
+    print(dataJson)"""

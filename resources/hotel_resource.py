@@ -11,7 +11,7 @@ class Hotel(Resource):
         args = reqparse.RequestParser()
         args.add_argument("nombre", type=str, help="name of the hotel")
         args.add_argument("ubicacion", type=str, help="location of the hotel")
-        args.add_argument("telefono", type=str, help="phonr of the hotel")
+        args.add_argument("telefono", type=str, help="phone of the hotel")
         args.add_argument("pag_web", type=str, help="online contact of the hotel")
         args.add_argument("foto", type=str, help="image of the hotel")
         return args
@@ -20,8 +20,8 @@ class Hotel(Resource):
         result = self.logic.getHotelByUbicacion(ubicacion)
         return result, 200
 
-    def post(self, id):
-        result = self.logic.getAllHotels(id)
+    def post(self, ubicacion):
+        result = self.logic.getAllHotels(ubicacion)
         return result, 200
 
     def put(self, id):

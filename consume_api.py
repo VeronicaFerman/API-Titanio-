@@ -43,17 +43,17 @@ if response.status_code == 200:
     print(dataJson)"""
 
 #HOTEL
-response = requests.get("https://restapi-titanio.herokuapp.com/hotel/San Salvador")
-print(response)
-if response.status_code == 200:
-    dataJson = response.json()
-    print(dataJson)
-
-"""response = requests.post("http://localhost:23512/hotel/all")
+"""response = requests.get("https://restapi-titanio.herokuapp.com/hotel/San Salvador")
 print(response)
 if response.status_code == 200:
     dataJson = response.json()
     print(dataJson)"""
+
+response = requests.post("https://restapi-titanio.herokuapp.com/hotel/all")
+print(response)
+if response.status_code == 200:
+    dataJson = response.json()
+    print(dataJson)
 
 """data = {
     "nombre": "Hotel Santa Elena",

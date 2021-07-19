@@ -16,9 +16,9 @@ class HotelLogic(PybaLogic):
             return {}
 
     # post
-    def getAllHotels(self, id):
+    def getAllHotels(self, ubicacion):
         database = self.createDatabaseObj()
-        sql = f"SELECT * FROM hoteles;"
+        sql = f"SELECT * FROM `hoteles`;"
         result = database.executeQuery(sql)
         if len(result) != 0:
             return result

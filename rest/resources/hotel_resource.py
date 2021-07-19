@@ -5,14 +5,14 @@ from logic.hotel_logic import HotelLogic
 class Hotel(Resource):
     def __init__(self):
         self.hotel_put_args = self.createParser()
-        self.logic = HotelLogic
+        self.logic = HotelLogic()
 
     def createParser(self):
         args = reqparse.RequestParser()
         args.add_argument("nombre", type=str, help="name of the hotel")
         args.add_argument("ubicacion", type=str, help="location of the hotel")
-        args.add_argument("telefono", type=str, help="location of the hotel")
-        args.add_argument("pag_web", type=str, help="location of the hotel")
+        args.add_argument("telefono", type=str, help="phonr of the hotel")
+        args.add_argument("pag_web", type=str, help="online contact of the hotel")
         args.add_argument("foto", type=str, help="image of the hotel")
         return args
 
@@ -25,13 +25,13 @@ class Hotel(Resource):
         return result, 200
 
     def put(self, id):
-        tour = self.tour_put_args.parse_args()
+        hotel = self.tour_put_args.parse_args()
         rows = self.logic.insertHotel(hotel)
         return {"rowsAffected": rows}
 
     def patch(self, id):
         city = self.tour_put_args.parse_args()
-        rows = self.logic.updateHotel(id, hotel)
+        rows = self.logic.updateHotel(id, city)
         return {"rowsAffected": rows}
 
     def delete(self, id):

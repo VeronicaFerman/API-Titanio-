@@ -5,14 +5,14 @@ from logic.hotel_logic import HotelLogic
 class Hotel(Resource):
     def __init__(self):
         self.hotel_put_args = self.createParser()
-        self.logic = HotelLogic
+        self.logic = HotelLogic()
 
     def createParser(self):
         args = reqparse.RequestParser()
         args.add_argument("nombre", type=str, help="name of the hotel")
         args.add_argument("ubicacion", type=str, help="location of the hotel")
-        args.add_argument("telefono", type=str, help="location of the hotel")
-        args.add_argument("pag_web", type=str, help="location of the hotel")
+        args.add_argument("telefono", type=str, help="phonr of the hotel")
+        args.add_argument("pag_web", type=str, help="online contact of the hotel")
         args.add_argument("foto", type=str, help="image of the hotel")
         return args
 

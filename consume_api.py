@@ -16,7 +16,7 @@ if response.status_code == 200:
 # {'id': 20, 'nombre': 'Volcan De Santa Ana O Ilamatepec', 'ubicacion': 'Santa Ana', 'imagen': 'https://astelus.com/wp-content/viajes/volcan-ilamatepec-el-salvador.jpg'}]
 
 
-"""data = {
+data = {
     "nombre": "Laguna de Alegría",
     "ubicacion": "San Vicente"
 }
@@ -24,7 +24,7 @@ response = requests.put("https://restapi-titanio.herokuapp.com/tour/0", data=dat
 print(response)
 if response.status_code == 200:
     dataJson = response.json()
-    print(dataJson)"""
+    print(dataJson)
 
 """data = {
     "nombre": "Laguna de Alegría",

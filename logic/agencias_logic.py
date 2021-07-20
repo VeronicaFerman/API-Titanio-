@@ -7,7 +7,7 @@ class AgenciasLogic(PybaLogic):
     #Post
     def getAllAgencias(self, nombre):
         database = self.createDatabaseObj()
-        sql = f"SELECT * FROM agencias_turisticas where ubicacion like '{nombre}';"
+        sql = f"SELECT * FROM agencias_turisticas;"
         result = database.executeQuery(sql)
         if len(result) != 0:
             return result

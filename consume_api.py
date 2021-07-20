@@ -1,13 +1,13 @@
 import requests
 
-"""response = requests.get("http://localhost:23512/tour/San Salvador")
+"""response = requests.get("https://restapi-titanio.herokuapp.com/tour/San Salvador")
 print(response)
 if response.status_code == 200:
     dataJson = response.json()
     print(dataJson)"""
 #Result from GET: {'id': 2, 'nombre': 'Iglesia El Rosario', 'ubicacion': 'San Salvador', 'imagen': 'https://media-cdn.tripadvisor.com/media/photo-s/0d/41/a8/8e/interior-de-la-iglesia.jpg'}
 
-"""response = requests.post("http://localhost:23512/tour/all")
+"""response = requests.post("https://restapi-titanio.herokuapp.com/tour/all")
 print(response)
 if response.status_code == 200:
     dataJson = response.json()
@@ -20,7 +20,7 @@ if response.status_code == 200:
     "nombre": "Laguna de Alegría",
     "ubicacion": "San Vicente"
 }
-response = requests.put("http://localhost:23512/tour/0", data=data)
+response = requests.put("https://restapi-titanio.herokuapp.com/tour/0", data=data)
 print(response)
 if response.status_code == 200:
     dataJson = response.json()
@@ -30,13 +30,13 @@ if response.status_code == 200:
     "nombre": "Laguna de Alegría",
     "ubicacion": "Usulutan"
 }
-response = requests.patch("http://localhost:23512/tour/2", data=data)
+response = requests.patch("https://restapi-titanio.herokuapp.com/tour/2", data=data)
 print(response)
 if response.status_code == 200:
     dataJson = response.json()
     print(dataJson)"""
 
-"""response = requests.delete("http://localhost:23512/tour/2")
+"""response = requests.delete("https://restapi-titanio.herokuapp.com/tour/2")
 print(response)
 if response.status_code == 200:
     dataJson = response.json()
@@ -62,7 +62,7 @@ if response.status_code == 200:
     "pag_web": "https://hotelsantaelena.com/",
     "foto": "https://hotelsantaelena.com/assets/img/3/carousel_01.jpg"
 }
-response = requests.put("http://localhost:23512/hotel/0", data=data)
+response = requests.put("https://restapi-titanio.herokuapp.com/hotel/0", data=data)
 print(response)
 if response.status_code == 200:
     dataJson = response.json()
@@ -75,13 +75,13 @@ if response.status_code == 200:
     "pag_web": "https://www.facebook.com/Hotel-El-Patio-de-Don-Moncho-130549366961076/",
     "foto": "https://media-cdn.tripadvisor.com/media/photo-p/09/66/6e/0c/el-patio-de-don-moncho.jpg"
 }
-response = requests.patch("http://localhost:23512/hotel/2", data=data)
+response = requests.patch("https://restapi-titanio.herokuapp.com/hotel/2", data=data)
 print(response)
 if response.status_code == 200:
     dataJson = response.json()
     print(dataJson)"""
 
-"""response = requests.delete("http://localhost:23512/hotel/2")
+"""response = requests.delete("https://restapi-titanio.herokuapp.com/hotel/2")
 print(response)
 if response.status_code == 200:
     dataJson = response.json()

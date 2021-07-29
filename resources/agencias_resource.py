@@ -18,3 +18,8 @@ class Agencias(Resource):
     def post(self, nombre):
         result = self.logic.getAllAgencias(nombre)
         return result, 200
+
+    #Get
+    def get(self, nombre):
+        result = self.logic.getAgencias(nombre)
+        return result, 200

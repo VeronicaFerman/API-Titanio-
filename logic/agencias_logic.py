@@ -13,3 +13,16 @@ class AgenciasLogic(PybaLogic):
             return result
         else:
             return []
+
+    #Get
+    def getAgencias(self, nombre):
+        database = self.createDatabaseObj()
+        sql = f"SELECT * FROM agencias_turisticas;"
+        result = database.executeQuery(sql)
+        if len(result) != 0:
+            return result
+        else:
+            return []
+
+    
+

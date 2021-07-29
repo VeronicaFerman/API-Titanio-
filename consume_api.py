@@ -95,3 +95,11 @@ if response.status_code == 200:
     dataJson = response.json()
     print(dataJson)
 """
+
+"""
+response = requests.get("https://restapi-titanio.herokuapp.com/agencias/all")
+print(response)
+if response.status_code == 200:
+    dataJson = response.json()
+    print(dataJson)
+"""

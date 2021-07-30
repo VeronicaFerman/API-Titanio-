@@ -21,5 +21,5 @@ class Agencias(Resource):
 
     #Get
     def get(self, nombre):
-        result = self.logic.getAgencias(nombre)
+        result = self.logic.getAgenciasByNombre(nombre)
         return result, 200
